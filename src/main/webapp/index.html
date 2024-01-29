@@ -1,616 +1,420 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AdminLTE</title>
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
-	integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK"
-	crossorigin="anonymous">
-<script src="https://kit.fontawesome.com/ce4cad5060.js"
-	crossorigin="anonymous"></script>
-<link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style.css">
-<script
-	src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ce4cad5060.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
 </head>
+
 <body>
-	<nav class="navbar navbar-expand d-flex flex-column align-items-start"
-		id="sidebar">
-		<div
-			class="container-fluid font-weight-bold text-light bg-primary justify-content-center"
-			style="position: relative; margin-top: -8px; height: 53px;">
-			<h3 class="font-weight-bold text-light mt-1">AdminLTE</h3>
-		</div>
-		<ul class="navbar-nav d-flex flex-column mt-2 w-100">
-			<li class="nav-item w-100 "><img src="images/alexander.svg"
-				alt="Avatar" class="avatar bg-light rounded-circle"
-				style="margin-left: 10px;"><a href="#profile"
-				style="color: #ffffff; text-decoration: none; margin-left: 10px;">Alexander
-					Pierce</a></li>
-			<li class="nav-item w-100 text-light" style="margin-left: 50px;"><i
-				class="fa-solid fa-circle" style="color: #22aa2b;"></i><span>
-					Online</span></li>
-			<li class="nav-item dropdown w-100"><a href="#"
-				class="nav-link dropdown-toggle text-light pl-4" id="navbarDropdown"
-				role="button" data-bs-toggle="dropdown" aria-expanded="false">Dashboard</a>
-				<ul class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
-					<li><a href="#" class="dropdown-item text-light pl-4 p-2">Dashboard
-							1
-							<li><a href="#" class="dropdown-item text-light pl-4 p-2">Dashboard
-									2</a></li>
-				</ul></li>
-			<li class="nav-item w-100"><a href="#"
-				class="nav-link text-light pl-4">Layout Options</a></li>
-			<li class="nav-item w-100"><a href="#"
-				class="nav-link text-light pl-4">Widget</a></li>
-			<li class="nav-item w-100"><a href="#"
-				class="nav-link text-light pl-4">Charts</a></li>
-			<li class="nav-item w-100"><a href="#"
-				class="nav-link text-light pl-4">UI Elements</a></li>
-		</ul>
-	</nav>
-	
-	<div class="container-fluid navbar-primary bg-primary">
-		<div class="row">
-			<div class="col-1 bg-primary">
-				<section class="my-container bg-primary">
-					<button class="btn my-2 bg-primary" id="menu-btn"
-						data-toggle="collapse" data-target="#navbarToggleExternalContent"
-						aria-controls="navbarToggleExternalContent" aria-expanded="false"
-						aria-label="Toggle navigation">
-						<i class="fa-solid fa-bars"></i>
-					</button>
-				</section>
-			</div>
-			<div class="col-8"></div>
-			<div class="col-3" style="margin-top: 15px">
-				<a href="#email" style="margin-right: 12px"><i
-					class="fa-regular fa-envelope" style="color: #ffffff"></i></a> <a
-					href="#bell" style="margin-right: 12px"><i
-					class="fa-regular fa-bell" style="color: #ffffff"></i></a> <a
-					href="#flag" style="margin-right: 12px"><i
-					class="fa-regular fa-flag" style="color: #ffffff"></i></a> <img
-					src="images/alexander.svg" alt="Avatar"
-					class="avatar bg-light rounded-circle"> <a href="#profile"
-					style="color: #ffffff; text-decoration: none; margin-right: 12px">Alexander
-					Pierce</a> <a href="#setting" style="margin-right: 12px"><i
-					class="fa-solid fa-gear" style="color: #ffffff"></i></a>
-			</div>
-		</div>
-	</div>
-	
-	<div class="container-fluid bg-light float-end">
-		<div class="row p-2">
-			<div class="col-1 font-weight-bold">Dashboard</div>
-			<div class="col-1 text-black-50">Version 2.0</div>
-			<div class="col-8"></div>
-			<div class="col-2">Home > Dashboard</div>
-		</div>
-		<div class="container-fluid ">
-			<div class="row">
-				<div class="col-md mb-3">
-					<div class="border bg-white">
-						<img alt="CPU TRAFFIC" src="images/setting.svg"
-							style="width: 100px; height: 100px;"><span> CPU
-							TRAFFIC </span><span>90%</span>
-					</div>
-				</div>
-				<div class="col-md mb-3">
-					<div class="border bg-white">
-						<img alt="CPU TRAFFIC" src="images/google.svg"
-							style="width: 100px; height: 100px;"> LIKES 41,410
-					</div>
-				</div>
-				<div class="col-md mb-3">
-					<div class="border bg-white">
-						<img alt="CPU TRAFFIC" src="images/trolly.svg"
-							style="width: 100px; height: 100px;"> SALES 760
-					</div>
-				</div>
-				<div class="col-md mb-3">
-					<div class="border bg-white">
-						<img alt="CPU TRAFFIC" src="images/member.svg"
-							style="width: 100px; height: 100px;"> NEW MEMBERS 2,000
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="container-fluid bg-light float-end px-4">
-		<div class="row gx-5">
-			<div class="col-lg-4">
-				<div class="direct-chat border-top border-4 rounded border-warning">
-					<div
-						class="container-fluid card-header d-inline-block bg-white border font-weight-bold">
-						Direct Chat
-						<button type="button" class="btn btn-tool float-right"
-							data-widget="remove">
-							<i class="fas fa-times"></i>
-						</button>
-						<button type="button" class="btn btn-tool float-right"
-							data-toggle="tooltip" title="Contacts"
-							data-widget="chat-pane-toggle">
-							<i class="fas fa-comments"></i>
-						</button>
-						<button type="button" class="btn btn-tool float-right"
-							data-widget="collapse">
-							<i class="fas fa-minus"></i>
-						</button>
-						<span
-							class="badge bg-warning float-right rounded-pill d-flex align-items-center justify-content-center float-end"><strong>3</strong></span>
-					</div>
-					<div class="card-body border bg-white">
-						<div class="direct-chat-messages overflow-auto "
-							style="max-height: 260px">
-							<div class="direct-chat-msg">
-								<div class="direct-chat-infos clearfix">
-									<span class="direct-chat-name float-left">Alexander
-										Pierce</span> <span class="direct-chat-timestamp float-right">23
-										Jan 2:00 pm</span>
-								</div>
-								<img class="direct-chat-img float-left rounded-circle "
-									style="width: 40px; height: 40px" src="images/alexander.svg"
-									alt="message user image"> <span
-									class="rounded bg-info d-flex justify-content-center"
-									style="font-size: 15px; padding: 9px; margin-left: 50px; margin-right: 10px">Is
-									this template really for free?</span>
-
-							</div>
-							<br>
-							<div class="direct-chat-msg right">
-								<div class="direct-chat-infos clearfix">
-									<span class="direct-chat-name float-right">Sarah Bullock</span>
-									<span class="direct-chat-timestamp float-left">23 Jan
-										2:05 pm</span>
-								</div>
-								<img class="direct-chat-img float-right rounded-circle"
-									style="width: 40px; height: 40px" src="images/Sarah.svg"
-									alt="message user image"> <span
-									class="rounded bg-warning d-flex justify-content-center"
-									style="font-size: 15px; padding: 9px; margin-right: 50px">You
-									better believe it!</span>
-							</div>
-							<br>
-							<div class="direct-chat-msg">
-								<div class="direct-chat-infos clearfix">
-									<span class="direct-chat-name float-left">Alexander
-										Pierce</span> <span class="direct-chat-timestamp float-right">23
-										Jan 5:37 pm</span>
-								</div>
-								<img class="direct-chat-img float-left rounded-circle"
-									style="width: 40px; height: 40px" src="images/alexander.svg"
-									alt="message user image"> <span
-									class="rounded bg-info d-flex justify-content-center"
-									style="font-size: 15px; padding: 9px; margin-left: 50px; margin-right: 10px">Working
-									with AdminLTE on a great new app!</span>
-							</div>
-							<br>
-							<div class="direct-chat-msg right">
-								<div class="direct-chat-infos clearfix">
-									<span class="direct-chat-name float-right">Sarah Bullock</span>
-									<span class="direct-chat-timestamp float-left">23 Jan
-										6:10 pm</span>
-								</div>
-								<img class="direct-chat-img float-right rounded-circle"
-									style="width: 40px; height: 40px" src="images/Sarah.svg"
-									alt="message user image"> <span
-									class="rounded bg-warning d-flex justify-content-center"
-									style="font-size: 15px; padding: 9px; margin-right: 50px">You
-									better believe it!</span>
-							</div>
-						</div>
-					</div>
-
-					<div
-						class="container-fluid card-header d-inline-block bg-white border">
-						<form action="#" method="post">
-							<div class="input-group-append d-flex">
-								<input type="text" name="message" placeholder="Type Message ..."
-									class="form-control">
-								<button type="button" class="btn btn-warning">Send</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="latest border-top border-4 rounded border-danger">
-					<div
-						class="container-fluid card-header d-inline-block bg-white border">
-						<div class="mb-3 font-weight-bold">
-							Latest Members
-							<button type="button" class="btn btn-tool float-right"
-								data-widget="remove">
-								<i class="fas fa-times"></i>
-							</button>
-							<button type="button" class="btn btn-tool float-right"
-								data-widget="collapse">
-								<i class="fas fa-minus"></i>
-							</button>
-							<span class="badge bg-danger float-right" data-widget="collapse">8
-								new Members</span>
-						</div>
-						<div class="border-top">
-							<div class="row mt-3">
-								<div class="col-3">
-									<img class="direct-chat-img rounded-circle"
-										style="width: 80px; height: 80px;" src="images/alexander.svg"
-										alt="message user image">
-									<p align="center">
-										Alexander...<br>Today
-									</p>
-									<img class="direct-chat-img rounded-circle"
-										style="width: 80px; height: 80px;" src="images/Alexander.svg"
-										alt="message user image">
-									<p align="center">
-										Alexander<br>13 Jan
-									</p>
-								</div>
-								<div class="col-3">
-									<img class="direct-chat-img rounded-circle"
-										style="width: 80px; height: 80px" src="images/Norman.svg"
-										alt="message user image">
-									<p align="center">
-										Norman<br>Yesterday
-									</p>
-									<img class="direct-chat-img rounded-circle"
-										style="width: 80px; height: 80px" src="images/Sarah.svg"
-										alt="message user image">
-									<p align="center">
-										Sarah<br>14 Jan
-									</p>
-								</div>
-								<div class="col-3">
-									<img class="direct-chat-img rounded-circle"
-										style="width: 80px; height: 80px" src="images/Jane.svg"
-										alt="message user image">
-									<p align="center">
-										Jane<br>12 Jan
-									</p>
-									<img class="direct-chat-img rounded-circle"
-										style="width: 80px; height: 80px" src="images/Nora.svg"
-										alt="message user image">
-									<p align="center">
-										Nora<br>15 Jan
-									</p>
-								</div>
-								<div class="col-3">
-									<img class="direct-chat-img rounded-circle"
-										style="width: 80px; height: 80px" src="images/john.svg"
-										alt="message user image">
-									<p align="center">
-										Jhon<br>12 Jan
-									</p>
-									<img class="direct-chat-img rounded-circle"
-										style="width: 80px; height: 80px" src="images/Nadia.svg"
-										alt="message user image">
-									<p align="center">
-										Nadia<br>15 Jan
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div
-						class="container fluid border card-footer d-inline-block bg-white text-primary text-center">
-						<a href="#" style="text-decoration: none;">View All Users</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="latest border-top border-4 rounded border-success">
-					<div
-						class="container-fluid card-header d-inline-block bg-white border">
-						<div class="d-flex justify-content-center m-2 font-weight-bold">Goal
-							Completion</div>
-						<div class="border-top p-5 ">
-							<lable class="text-black font-weight-bold">Add Products to Cart</lable>
-							<lable class="text-black float-right"><span class="font-weight-bold">160</span>/200</lable>
-							<div class="pb">
-								<div class="progress">
-									<div class="progress-bar bg-primary" style="width: 70%"></div>
-								</div>
-							</div>
-							<br>
-							<lable class="text-black font-weight-bold">Complete Purchase</lable>
-							<lable class="text-black float-right"><span class="font-weight-bold">310</span>/400</lable>
-							<div class="pb">
-								<div class="progress">
-									<div class="progress-bar bg-danger" style="width: 70%"></div>
-								</div>
-							</div>
-							<br>
-							<lable class="text-black font-weight-bold">Visit Premium Page</lable>
-							<lable class="text-black float-right"><span class="font-weight-bold">480</span>/800</lable>
-							<div class="pb">
-								<div class="progress">
-									<div class="progress-bar bg-success" style="width: 70%"></div>
-								</div>
-							</div>
-							<br>
-							<lable class="text-black font-weight-bold">Send Inquiries</lable>
-							<lable class="text-black float-right"><span class="font-weight-bold">250</span>/500</lable>
-							<div class="pb">
-								<div class="mb-3 progress">
-									<div class="progress-bar bg-warning" style="width: 70%"></div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="container-fluid p-4 float-end bg-light">
-		<div class="row gx-5">
-			<div class="col-8 ">
-				<div
-					class="container bg-white border-top border-4 rounded border-primary">
-					<table class="table ">
-						<thead>
-							<tr>
-								<td colspan="3"><h5>Latest Orders</h5></td>
-								<td align="right">
-									<button type="button" class="btn btn-box-tool"
-										data-widget="collapse">
-										<i class="fa-solid fa-minus fa-sm"></i>
-									</button>
-									<button type="button" class="btn btn-box-tool"
-										data-widget="remove">
-										<i class="fa-solid fa-times fa-sm"></i>
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<th scope="col">Order ID</th>
-								<th scope="col">Item</th>
-								<th scope="col">Status</th>
-								<th scope="col">Popularity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td><a href="#" style="text-decoration: none;">OR9842</a></td>
-								<td>Call of Duty IV</td>
-								<td><span class="badge bg-success" data-widget="collapse">Shipped</span></td>
-								<td><i class="fa-solid fa-chart-simple fa-2xl"
-									style="color: #0fe600;"></i><i
-									class="fa-solid fa-chart-simple fa-2xl" style="color: #0fe600;"></i></td>
-							</tr>
-							<tr>
-								<td><a href="#" style="text-decoration: none;">OR1848</a></td>
-								<td>Samsung Smart TV</td>
-								<td><span class="badge bg-warning" data-widget="collapse">Pending</span></td>
-								<td><i class="fa-solid fa-chart-simple fa-2xl"
-									style="color: #ff8800;"></i><i
-									class="fa-solid fa-chart-simple fa-2xl" style="color: #ff8800;"></i></td>
-							</tr>
-							<tr>
-								<td><a href="#" style="text-decoration: none;">OR7429</a></td>
-								<td>iPhone 6 Plus</td>
-								<td><span class="badge bg-danger" data-widget="collapse">Delivered</span></td>
-								<td><i class="fa-solid fa-chart-simple fa-2xl"
-									style="color: #ff0000;"></i><i
-									class="fa-solid fa-chart-simple fa-2xl" style="color: #ff0000;"></i></td>
-							</tr>
-							<tr>
-								<td><a href="#" style="text-decoration: none;">OR7429</a></td>
-								<td>Samsung Smart TV</td>
-								<td><span class="badge bg-primary" data-widget="collapse">Processing</span></td>
-								<td><i class="fa-solid fa-chart-simple fa-2xl"
-									style="color: #74C0FC;"></i><i
-									class="fa-solid fa-chart-simple fa-2xl" style="color: #74C0FC;"></i></td>
-							</tr>
-							<tr>
-								<td><a href="#" style="text-decoration: none;">OR1848</a></td>
-								<td>Samsung Smart TV</td>
-								<td><span class="badge bg-warning" data-widget="collapse">Pending</span></td>
-								<td><i class="fa-solid fa-chart-simple fa-2xl"
-									style="color: #ff8800;"></i><i
-									class="fa-solid fa-chart-simple fa-2xl" style="color: #ff8800;"></i></td>
-							</tr>
-							<tr>
-								<td><a href="#" style="text-decoration: none;">OR7429</a></td>
-								<td>iPhone 6 Plus</td>
-								<td><span class="badge bg-danger" data-widget="collapse">Delivered</span></td>
-								<td><i class="fa-solid fa-chart-simple fa-2xl"
-									style="color: #ff0000;"></i><i
-									class="fa-solid fa-chart-simple fa-2xl" style="color: #ff0000;"></i></td>
-							</tr>
-							<tr>
-								<td><a href="#" style="text-decoration: none;">OR9842</a></td>
-								<td>Call of Duty IV</td>
-								<td><span class="badge bg-success" data-widget="collapse">Shipped</span></td>
-								<td><i class="fa-solid fa-chart-simple fa-2xl"
-									style="color: #0fe600;"></i><i
-									class="fa-solid fa-chart-simple fa-2xl" style="color: #0fe600;"></i></td>
-							</tr>
-						</tbody>
-					</table>
-					<button type="button" class="btn btn-primary mb-4">Place
-						New Order</button>
-					<button type="button" class="btn btn-light mb-4"
-						style="float: right;">View All Orders</button>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="row border bg-warning">
-					<div
-						class=" border col-2 d-flex align-items-center justify-content-center">
-						<i class="fa-solid fa-tag fa-flip-horizontal fa-2xl d-flex"></i>
-					</div>
-					<div class="col-10 justify-content-center p-0 m-0 ">
-						<div class="info-box-content m-1">
-							<span class="info-box-text">Inventory</span><br> <span
-								class="info-box-number">5,200</span>
-							<div class="progress">
-								<div class="progress-bar bg-dark" style="width: 50%"></div>
-							</div>
-							<span class="progress-description"> 50% Increase in 30
-								Days </span>
-						</div>
-					</div>
-				</div>
-				<br>
-				<div class="row border bg-success">
-					<div
-						class="border col-2 d-flex align-items-center justify-content-center ">
-						<i class="fa-regular fa-heart fa-2xl d-flex"></i>
-					</div>
-					<div class="col-10 justify-content-center p-0 m-0">
-						<div class="info-box-content m-1">
-							<span class="info-box-text">Mentions</span><br> <span
-								class="info-box-number">92,050</span>
-							<div class="progress">
-								<div class="progress-bar bg-dark" style="width: 20%"></div>
-							</div>
-							<span class="progress-description"> 20% Increase in 30
-								Days </span>
-						</div>
-					</div>
-				</div>
-				<br>
-				<div class="row border bg-danger">
-					<div
-						class="border col-2 d-flex align-items-center justify-content-center ">
-						<i class="fa-solid fa-cloud-download fa-2xl d-flex"></i>
-					</div>
-					<div class="col-10 justify-content-center p-0 m-0">
-						<div class="info-box-content m-1">
-							<span class="info-box-text">Downlaods</span><br> <span
-								class="info-box-number">114,381</span>
-							<div class="progress">
-								<div class="progress-bar bg-dark" style="width: 70%"></div>
-							</div>
-							<span class="progress-description"> 70% Increase in 30
-								Days </span>
-						</div>
-					</div>
-				</div>
-				<br>
-				<div class="row border bg-info">
-					<div
-						class="border col-2 d-flex align-items-center justify-content-center ">
-						<i class="fa-regular fa-comment fa-2xl d-flex"></i>
-					</div>
-					<div class="col-10 justify-content-center p-0 m-0">
-						<div class="info-box-content m-1">
-							<span class="info-box-text">Direct Messages</span><br> <span
-								class="info-box-number">163,921</span>
-							<div class="progress">
-								<div class="progress-bar bg-dark" style="width: 40%"></div>
-							</div>
-							<span class="progress-description"> 40% Increase in 30
-								Days </span>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-	
-	<div class="container-fluid bg-light">
-		<div class="row">
-			<div class="col-4">
-				<div class="container-fluid">
-					<div class="border bg-white">
-						<div class="container-fluid card-header d-inline-block bg-white ">
-							Browser usage
-							<button type="button" class="btn btn-tool float-right"
-								data-widget="remove">
-								<i class="fas fa-times"></i>
-							</button>
-							<button type="button" class="btn btn-tool float-right"
-								data-widget="collapse">
-								<i class="fas fa-minus"></i>
-							</button>
-						</div>
-						<div>
-							<canvas id="chartjs-doughnut"></canvas>
-						</div>
-						<div class="container-fluid card-header d-inline-block bg-white">
-							United States of America<span style="float: right;">^12%</span>
-						</div>
-						<div class="container-fluid card-header d-inline-block bg-white">
-							India<span style="float: right;">^4%</span>
-						</div>
-						<div class="container-fluid card-header d-inline-block bg-white">
-							China<span style="float: right;"> <0%</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-4"></div>
-			<div class="col-4">
-				<div class="border-top border-4 rounded border-danger bg-white">
-					<table class="table">
-						<tbody>
-							<tr>
-								<td colspan="2"><h5>Recently Added Products</h5></td>
-								<td>
-									<button type="button" class="btn btn-box-tool"
-										data-widget="collapse">
-										<i class="fa-solid fa-minus fa-sm"></i>
-									</button>
-									<button type="button" class="btn btn-box-tool"
-										data-widget="remove">
-										<i class="fa-solid fa-times fa-sm"></i>
-									</button>
-								</td>
-							</tr>
-							<tr>
-								<td align="center" style="vertical-align: middle;"><i
-									class="fa-regular fa-image fa-2xl"></i></td>
-								<td>Samsung TV<br>Samsung 32"1080p 60hz LED Smart
-									HDTV.
-								</td>
-								<td align="right"><span class="badge bg-warning"
-									data-widget="collapse">$1800</span></td>
-							</tr>
-							<tr>
-								<td align="center" style="vertical-align: middle;"><i
-									class="fa-regular fa-image fa-2xl"></i></td>
-								<td>Bicycle<br>26"Mongoose Dolomite Men's 7-speed....
-								</td>
-								<td align="right"><span class="badge bg-primary"
-									data-widget="collapse">$700</span></td>
-							</tr>
-							<tr>
-								<td align="center" style="vertical-align: middle;"><i
-									class="fa-regular fa-image fa-2xl"></i></td>
-								<td>Xbox One<br>Xbox Console Bundle with Halo
-									Master....
-								</td>
-								<td align="right"><span class="badge bg-danger"
-									data-widget="collapse">$350</span></td>
-							</tr>
-							<tr>
-								<td align="center" style="vertical-align: middle;"><i
-									class="fa-regular fa-image fa-2xl"></i></td>
-								<td>PlayStation 4<br>PlayStation 4 500GB Console(PS4)
-								</td>
-								<td align="right"><span class="badge bg-success"
-									data-widget="collapse">$399</span></td>
-							</tr>
-							<tr>
-								<td colspan="3" align="center"><a href="#"
-									style="text-decoration: none;">View All Products</a></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<script>
+    <nav class="navbar navbar-expand d-flex flex-column align-items-start" id="sidebar">
+		<div class="container-fluid font-weight-bold text-light bg-primary justify-content-center" style="position: relative; margin-top: -0.5rem; height: 3.3125rem;"> 
+            <h3 class="font-weight-bold text-light mt-1">AdminLTE</h3>
+        </div>
+        <ul class="navbar-nav d-flex flex-column mt-2 w-100">
+            <li class="nav-item w-100"> 
+            	<img src="images/alexander.svg" alt="Avatar" class="avatar bg-light rounded-circle" style="margin-left: 0.5rem;"> 
+            	<a href="#profile" style="color: #ffffff; text-decoration: none; margin-left: 0.5rem;">Alexander Pierce</a> 
+            </li>
+            <li class="nav-item w-100 text-light" style="margin-left: 3.125rem;"> 
+	            <i class="fa-solid fa-circle" style="color: #22aa2b;"></i> 
+	            <span>Online</span> 
+            </li>
+            <li class="nav-item dropdown w-100"> 
+            	<a href="#" class="nav-link dropdown-toggle text-light pl-4" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dashboard</a>
+                <ul class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
+                    <li> <a href="#" class="dropdown-item text-light pl-4 p-2"> Dashboard 1</a></li>
+                    <li> <a href="#" class="dropdown-item text-light pl-4 p-2">Dashboard 2</a></li>
+                </ul>
+            </li>
+            <li class="nav-item w-100"><a href="#" class="nav-link text-light pl-4">Layout Options</a></li>
+            <li class="nav-item w-100"><a href="#" class="nav-link text-light pl-4">Widget</a></li>
+            <li class="nav-item w-100"><a href="#" class="nav-link text-light pl-4">Charts</a></li>
+            <li class="nav-item w-100"><a href="#" class="nav-link text-light pl-4">UI Elements</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container-fluid navbar-primary bg-primary">
+        <div class="row">
+            <div class="col-1 bg-primary">
+                <section class="my-container bg-primary"> 
+	                <button class="btn my-2 bg-primary" id="menu-btn" data-toggle="collapse" 
+	                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" 
+	                aria-expanded="false" aria-label="Toggle navigation"> 
+	                <i class="fa-solid fa-bars"></i></button> 
+                </section>
+            </div>
+            <div class="col-8"></div>
+            <div class="col-3" style="margin-top: 0.938rem"> 
+            	<a href="#email" style="margin-right: 0.75rem"><i class="fa-regular fa-envelope" style="color: #ffffff"></i></a> 
+            	<a href="#bell" style="margin-right: 0.75rem"><i class="fa-regular fa-bell" style="color: #ffffff"></i></a>
+            	<a href="#flag" style="margin-right: 0.75rem"><i class="fa-regular fa-flag" style="color: #ffffff"></i></a> 
+            	<img src="images/alexander.svg" alt="Avatar" class="avatar bg-light rounded-circle"> <a href="#profile" style="color: #ffffff; text-decoration: none; margin-right: 0.75rem">Alexander Pierce</a> 
+            	<a href="#setting" style="margin-right: 0.75rem"><i class="fa-solid fa-gear" style="color: #ffffff"></i></a> </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-light float-end">
+        <div class="row p-2">
+            <div class="col-1 font-weight-bold">Dashboard</div>
+            <div class="col-1 text-black-50">Version 2.0</div>
+            <div class="col-8"></div>
+            <div class="col-2">Home > Dashboard</div>
+        </div>
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-md mb-3">
+                    <div class="border bg-white"> <img alt="CPU TRAFFIC" src="images/setting.svg" style="width: 6.25rem; height: 6.25rem;"><span> CPU TRAFFIC </span><span>90%</span></div>
+                </div>
+                <div class="col-md mb-3">
+                    <div class="border bg-white"> <img alt="CPU TRAFFIC" src="images/google.svg" style="width: 6.25rem; height: 6.25rem;"> LIKES 41,410 </div>
+                </div>
+                <div class="col-md mb-3">
+                    <div class="border bg-white"> <img alt="CPU TRAFFIC" src="images/trolly.svg" style="width: 6.25rem; height: 6.25rem;"> SALES 760 </div>
+                </div>
+                <div class="col-md mb-3">
+                    <div class="border bg-white"> <img alt="CPU TRAFFIC" src="images/member.svg" style="width: 6.25rem; height: 6.25rem;"> NEW MEMBERS 2,000 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid bg-light float-end px-4">
+        <div class="row gx-5">
+            <div class="col-lg-4">
+                <div class="direct-chat border-top border-4 rounded border-warning">
+                    <div class="container-fluid card-header d-inline-block bg-white border font-weight-bold"> Direct Chat 
+	                    <button type="button" class="btn btn-tool float-right" data-widget="remove"> 
+	                    <i class="fas fa-times"></i> 
+	                    </button> 
+	                    <button type="button" class="btn btn-tool float-right" data-toggle="tooltip" title="Contacts" data-widget="chat-pane-toggle"> 
+	                    <i class="fas fa-comments"></i> 
+	                    </button> 
+	                    <button type="button" class="btn btn-tool float-right" data-widget="collapse"> 
+	                    <i class="fas fa-minus"></i> 
+	                    </button> 
+	                    <span class="badge bg-warning float-right rounded-pill d-flex align-items-center justify-content-center float-end"><strong>3</strong></span> 
+                    </div>
+                    <div class="card-body border bg-white">
+                        <div class="direct-chat-messages overflow-auto " style="max-height: 16.25rem">
+                            <div class="direct-chat-msg">
+                                <div class="direct-chat-infos clearfix"> 
+                                	<span class="direct-chat-name float-left">Alexander Pierce</span> 
+                                	<span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span> 
+                                </div> 
+                                <img class="direct-chat-img float-left rounded-circle " style="width: 2.5rem; height: 2.5rem" src="images/alexander.svg" alt="message user image"> 
+                                <span class="rounded bg-info d-flex justify-content-center" style="font-size: 0.938rem; padding: 0.563rem; margin-left: 3.125rem; margin-right: 0.625rem">Is this template really for free?</span>
+                            </div> <br>
+                            <div class="direct-chat-msg right">
+                                <div class="direct-chat-infos clearfix"> 
+                                	<span class="direct-chat-name float-right">Sarah Bullock</span> 
+                                	<span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span> 
+                            	</div> 
+                            	<img class="direct-chat-img float-right rounded-circle" style="width: 2.5rem; height: 2.5rem" src="images/Sarah.svg" alt="message user image"> 
+                            	<span class="rounded bg-warning d-flex justify-content-center" style="font-size: 0.938rem; padding: 0.563rem; margin-right: 3.125rem">You better believe it!</span>
+                            </div> <br>
+                            <div class="direct-chat-msg">
+                                <div class="direct-chat-infos clearfix"> 
+                                	<span class="direct-chat-name float-left">Alexander Pierce</span> 
+                                	<span class="direct-chat-timestamp float-right">23 Jan 5:37 pm</span> 
+                                </div> 
+                                <img class="direct-chat-img float-left rounded-circle" style="width: 2.5rem; height: 2.5rem" src="images/alexander.svg" alt="message user image"> 
+                                <span class="rounded bg-info d-flex justify-content-center" style="font-size: 0.938rem; padding: 0.563rem; margin-left: 3.125rem; margin-right: 0.625rem">Working with AdminLTE on a great new app!</span>
+                            </div> <br>
+                            <div class="direct-chat-msg right">
+                                <div class="direct-chat-infos clearfix"> 
+                                <span class="direct-chat-name float-right">Sarah Bullock</span> 
+                                <span class="direct-chat-timestamp float-left">23 Jan 6:10 pm</span> 
+                            </div> 
+                            <img class="direct-chat-img float-right rounded-circle" style="width: 2.5rem; height: 2.5rem" src="images/Sarah.svg" alt="message user image"> 
+                            <span class="rounded bg-warning d-flex justify-content-center" style="font-size: 0.938rem; padding: 0.563rem; margin-right: 3.125rem">You better believe it!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid card-header d-inline-block bg-white border">
+                        <form action="#" method="post">
+                            <div class="input-group-append d-flex"> 
+                            	<input type="text" name="message" placeholder="Type Message ..." class="form-control"> 
+                            	<button type="button" class="btn btn-warning">Send</button> 
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="latest border-top border-4 rounded border-danger">
+                    <div class="container-fluid card-header d-inline-block bg-white border">
+                        <div class="mb-3 font-weight-bold"> Latest Members 
+	                        <button type="button" class="btn btn-tool float-right" data-widget="remove"> 
+	                        <i class="fas fa-times"></i> 
+	                        </button> 
+	                        <button type="button" class="btn btn-tool float-right" data-widget="collapse"> 
+	                        <i class="fas fa-minus"></i> 
+	                        </button> 
+	                        <span class="badge bg-danger float-right" data-widget="collapse">8 new Members</span> 
+	                        </div>
+                        <div class="border-top">
+                            <div class="row mt-3">
+                                <div class="col-3"> <img class="direct-chat-img rounded-circle" style="width: 5rem; height: 5rem;" src="images/alexander.svg" alt="message user image">
+                                    <p align="center"> Alexander...<br>Today </p> 
+                                    <img class="direct-chat-img rounded-circle" style="width: 5rem; height: 5rem;" src="images/Alexander.svg" alt="message user image">
+                                    <p align="center"> Alexander<br>13 Jan </p>
+                                </div>
+                                <div class="col-3"> <img class="direct-chat-img rounded-circle" style="width: 5rem; height: 5rem" src="images/Norman.svg" alt="message user image">
+                                    <p align="center"> Norman<br>Yesterday </p> 
+                                    <img class="direct-chat-img rounded-circle" style="width: 5rem; height: 5rem" src="images/Sarah.svg" alt="message user image">
+                                    <p align="center"> Sarah<br>14 Jan </p>
+                                </div>
+                                <div class="col-3"> <img class="direct-chat-img rounded-circle" style="width: 5rem; height: 5rem" src="images/Jane.svg" alt="message user image">
+                                    <p align="center"> Jane<br>12 Jan </p> 
+                                    <img class="direct-chat-img rounded-circle" style="width: 5rem; height: 5rem" src="images/Nora.svg" alt="message user image">
+                                    <p align="center"> Nora<br>15 Jan </p>
+                                </div>
+                                <div class="col-3"> <img class="direct-chat-img rounded-circle" style="width: 5rem; height: 5rem" src="images/john.svg" alt="message user image">
+                                    <p align="center"> Jhon<br>12 Jan </p> 
+                                    <img class="direct-chat-img rounded-circle" style="width: 5rem; height: 5rem" src="images/Nadia.svg" alt="message user image">
+                                    <p align="center"> Nadia<br>15 Jan </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container fluid border card-footer d-inline-block bg-white text-primary text-center"> <a href="#" style="text-decoration: none;">View All Users</a> </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="latest border-top border-4 rounded border-success">
+                    <div class="container-fluid card-header d-inline-block bg-white border">
+                        <div class="d-flex justify-content-center m-2 font-weight-bold">Goal Completion </div>
+                        <div class="border-top p-5 ">
+                            <lable class="text-black font-weight-bold">Add Products to Cart</lable>
+                            <lable class="text-black float-right"><span class="font-weight-bold">160</span>/200</lable>
+                            <div class="pb">
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" style="width: 70%"></div>
+                                </div>
+                            </div> <br>
+                            <lable class="text-black font-weight-bold">Complete Purchase</lable>
+                            <lable class="text-black float-right"><span class="font-weight-bold">310</span>/400</lable>
+                            <div class="pb">
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" style="width: 70%"></div>
+                                </div>
+                            </div> <br>
+                            <lable class="text-black font-weight-bold">Visit Premium Page</lable>
+                            <lable class="text-black float-right"><span class="font-weight-bold">480</span>/800</lable>
+                            <div class="pb">
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" style="width: 70%"></div>
+                                </div>
+                            </div> <br>
+                            <lable class="text-black font-weight-bold">Send Inquiries</lable>
+                            <lable class="text-black float-right"><span class="font-weight-bold">250</span>/500</lable>
+                            <div class="pb">
+                                <div class="mb-3 progress">
+                                    <div class="progress-bar bg-warning" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid p-4 float-end bg-light">
+        <div class="row gx-5">
+            <div class="col-8 ">
+                <div class="container bg-white border-top border-4 rounded border-primary">
+                    <table class="table ">
+                        <thead>
+                            <tr>
+                                <td colspan="3">
+                                    <h5>Latest Orders</h5>
+                                </td>
+	                                <td align="right"> 
+	                                <button type="button" class="btn btn-box-tool" data-widget="collapse"> 
+	                                <i class="fa-solid fa-minus fa-sm"></i> 
+	                                </button> 
+	                                <button type="button" class="btn btn-box-tool" data-widget="remove"> 
+	                                <i class="fa-solid fa-times fa-sm"></i> 
+	                                </button> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="col">Order ID</th>
+                                <th scope="col">Item</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Popularity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#" style="text-decoration: none;">OR9842</a></td>
+                                <td>Call of Duty IV</td>
+                                <td><span class="badge bg-success" data-widget="collapse">Shipped</span></td>
+                                <td><i class="fa-solid fa-chart-simple fa-2xl" style="color: #0fe600;"></i><i class="fa-solid fa-chart-simple fa-2xl" style="color: #0fe600;"></i></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" style="text-decoration: none;">OR1848</a></td>
+                                <td>Samsung Smart TV</td>
+                                <td><span class="badge bg-warning" data-widget="collapse">Pending</span></td>
+                                <td><i class="fa-solid fa-chart-simple fa-2xl" style="color: #ff8800;"></i><i class="fa-solid fa-chart-simple fa-2xl" style="color: #ff8800;"></i></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" style="text-decoration: none;">OR7429</a></td>
+                                <td>iPhone 6 Plus</td>
+                                <td><span class="badge bg-danger" data-widget="collapse">Delivered</span></td>
+                                <td><i class="fa-solid fa-chart-simple fa-2xl" style="color: #ff0000;"></i><i class="fa-solid fa-chart-simple fa-2xl" style="color: #ff0000;"></i></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" style="text-decoration: none;">OR7429</a></td>
+                                <td>Samsung Smart TV</td>
+                                <td><span class="badge bg-primary" data-widget="collapse">Processing</span></td>
+                                <td><i class="fa-solid fa-chart-simple fa-2xl" style="color: #74C0FC;"></i><i class="fa-solid fa-chart-simple fa-2xl" style="color: #74C0FC;"></i></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" style="text-decoration: none;">OR1848</a></td>
+                                <td>Samsung Smart TV</td>
+                                <td><span class="badge bg-warning" data-widget="collapse">Pending</span></td>
+                                <td><i class="fa-solid fa-chart-simple fa-2xl" style="color: #ff8800;"></i><i class="fa-solid fa-chart-simple fa-2xl" style="color: #ff8800;"></i></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" style="text-decoration: none;">OR7429</a></td>
+                                <td>iPhone 6 Plus</td>
+                                <td><span class="badge bg-danger" data-widget="collapse">Delivered</span></td>
+                                <td><i class="fa-solid fa-chart-simple fa-2xl" style="color: #ff0000;"></i><i class="fa-solid fa-chart-simple fa-2xl" style="color: #ff0000;"></i></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#" style="text-decoration: none;">OR9842</a></td>
+                                <td>Call of Duty IV</td>
+                                <td><span class="badge bg-success" data-widget="collapse">Shipped</span></td>
+                                <td><i class="fa-solid fa-chart-simple fa-2xl" style="color: #0fe600;"></i><i class="fa-solid fa-chart-simple fa-2xl" style="color: #0fe600;"></i></td>
+                            </tr>
+                        </tbody>
+                    </table> <button type="button" class="btn btn-primary mb-4">Place New Order</button> <button type="button" class="btn btn-light mb-4" style="float: right;">View All Orders</button>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row border bg-warning">
+                    <div class=" border col-2 d-flex align-items-center justify-content-center"> <i class="fa-solid fa-tag fa-flip-horizontal fa-2xl d-flex"></i> </div>
+                    <div class="col-10 justify-content-center p-0 m-0 ">
+                        <div class="info-box-content m-1"> <span class="info-box-text">Inventory</span><br> <span class="info-box-number">5,200</span>
+                            <div class="progress">
+                                <div class="progress-bar bg-dark" style="width: 50%"></div>
+                            </div> <span class="progress-description"> 50% Increase in 30 Days </span>
+                        </div>
+                    </div>
+                </div> <br>
+                <div class="row border bg-success">
+                    <div class="border col-2 d-flex align-items-center justify-content-center "> <i class="fa-regular fa-heart fa-2xl d-flex"></i> </div>
+                    <div class="col-10 justify-content-center p-0 m-0">
+                        <div class="info-box-content m-1"> <span class="info-box-text">Mentions</span><br> <span class="info-box-number">92,050</span>
+                            <div class="progress">
+                                <div class="progress-bar bg-dark" style="width: 20%"></div>
+                            </div> <span class="progress-description"> 20% Increase in 30 Days </span>
+                        </div>
+                    </div>
+                </div> <br>
+                <div class="row border bg-danger">
+                    <div class="border col-2 d-flex align-items-center justify-content-center "> <i class="fa-solid fa-cloud-download fa-2xl d-flex"></i> </div>
+                    <div class="col-10 justify-content-center p-0 m-0">
+                        <div class="info-box-content m-1"> <span class="info-box-text">Downlaods</span><br> <span class="info-box-number">114,381</span>
+                            <div class="progress">
+                                <div class="progress-bar bg-dark" style="width: 70%"></div>
+                            </div> <span class="progress-description"> 70% Increase in 30 Days </span>
+                        </div>
+                    </div>
+                </div> <br>
+                <div class="row border bg-info">
+                    <div class="border col-2 d-flex align-items-center justify-content-center "> <i class="fa-regular fa-comment fa-2xl d-flex"></i> </div>
+                    <div class="col-10 justify-content-center p-0 m-0">
+                        <div class="info-box-content m-1"> <span class="info-box-text">Direct Messages</span><br> <span class="info-box-number">163,921</span>
+                            <div class="progress">
+                                <div class="progress-bar bg-dark" style="width: 40%"></div>
+                            </div> <span class="progress-description"> 40% Increase in 30 Days </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid bg-light">
+        <div class="row">
+            <div class="col-4">
+                <div class="container-fluid">
+                    <div class="border bg-white">
+                        <div class="container-fluid card-header d-inline-block bg-white "> Browser usage 
+	                        <button type="button" class="btn btn-tool float-right" data-widget="remove"> 
+	                        <i class="fas fa-times"></i> 
+	                        </button> 
+	                        <button type="button" class="btn btn-tool float-right" data-widget="collapse"> 
+	                        <i class="fas fa-minus"></i> 
+	                        </button> 
+                        </div>
+                        <div> <canvas id="chartjs-doughnut"></canvas> </div>
+                        <div class="container-fluid card-header d-inline-block bg-white"> United States of America<span style="float: right;">^12%</span> </div>
+                        <div class="container-fluid card-header d-inline-block bg-white"> India<span style="float: right;">^4%</span> </div>
+                        <div class="container-fluid card-header d-inline-block bg-white"> China<span style="float: right;">
+                                <0%< /span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="border-top border-4 rounded border-danger bg-white">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td colspan="2">
+                                    <h5>Recently Added Products</h5>
+                                </td>
+                                <td> 
+                                	<button type="button" class="btn btn-box-tool" data-widget="collapse"> 
+	                                <i class="fa-solid fa-minus fa-sm"></i> 
+	                                </button> 
+	                                <button type="button" class="btn btn-box-tool" data-widget="remove"> 
+	                                <i class="fa-solid fa-times fa-sm"></i> 
+	                                </button> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="vertical-align: middle;"><i class="fa-regular fa-image fa-2xl"></i></td>
+                                <td>Samsung TV<br>Samsung 32"1080p 60hz LED Smart HDTV. </td>
+                                <td align="right"><span class="badge bg-warning" data-widget="collapse">$1800</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="vertical-align: middle;"><i class="fa-regular fa-image fa-2xl"></i></td>
+                                <td>Bicycle<br>26"Mongoose Dolomite Men's 7-speed.... </td>
+                                <td align="right"><span class="badge bg-primary" data-widget="collapse">$700</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="vertical-align: middle;"><i class="fa-regular fa-image fa-2xl"></i></td>
+                                <td>Xbox One<br>Xbox Console Bundle with Halo Master.... </td>
+                                <td align="right"><span class="badge bg-danger" data-widget="collapse">$350</span></td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="vertical-align: middle;"><i class="fa-regular fa-image fa-2xl"></i></td>
+                                <td>PlayStation 4<br>PlayStation 4 500GB Console(PS4) </td>
+                                <td align="right"><span class="badge bg-success" data-widget="collapse">$399</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" align="center"><a href="#" style="text-decoration: none;">View All Products</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
         new Chart(document.getElementById("chartjs-doughnut"), {
             type: 'doughnut',
             data: {
@@ -631,24 +435,18 @@
                 radius: 100
             }
         });         
-	</script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.7.3/dist/js/bootstrap.min.js"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-		integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-		integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-		crossorigin="anonymous"></script>
-	<script>
-	 
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.7.3/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" 
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" 
+    crossorigin="anonymous"></script>
+    <script>
         var menuBtn = document.querySelector("#menu-btn")
         var sideBar = document.querySelector("#sidebar")
         var container = document.querySelector(".my-container")
@@ -662,7 +460,8 @@
             sideBar.classList.remove("active-nav");
             container.classList.remove("active-cont");
         }
-    }); 
+        }); 
     </script>
 </body>
+
 </html>
