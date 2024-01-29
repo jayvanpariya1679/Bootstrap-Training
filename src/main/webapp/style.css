@@ -1,0 +1,65 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.avatar {
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}
+
+body {
+	min-height: 100vh;
+	background-color: #fff;
+}
+
+.navbar {
+	width: 250px;
+	height: 100vh;
+	position: fixed;
+	margin-left: -300px;
+	background-color: black;
+	transition: 0.4s;
+}
+
+.nav-link {
+	font-size: 1.25em;
+}
+
+.dropdown-menu {
+	background-color: gray;
+}
+
+.dropdown-item:active, .dropdown-item:focus, .dropdown-item:hover {
+	background-color: gray;
+}
+
+.my-container {
+	transition: 0.4s;
+}
+
+/* for navbar */
+.active-nav {
+	margin-left: 0;
+}
+
+/* for main section */
+.active-cont {
+	margin-left: 250px;
+}
+
+#menu-btn {
+	background-color: black;
+	color: #fff;
+}
+
+#menu-btn:focus {
+	box-shadow: 0 0 0 0.25rem #7952b344;
+}
+
+.topnav-right {
+	margin-right: 10px;
+}
