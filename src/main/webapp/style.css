@@ -3,10 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
   black: #000000;
-  gray: #808080; 
-}
+} 
+
 .avatar {
     vertical-align: middle;
     width: 1.875rem; 
@@ -16,15 +17,13 @@
 
 body {
     min-height: 100vh;
-    background-color: #fff;
 }
 
 .navbar {
     width: 15.625rem; 
-    height: 100vh;
+    height: 100rem;
     position: fixed;
     margin-left: -18.75rem;
-    background-color: var(black);
     transition: 0.4s;
 }
 
@@ -32,15 +31,12 @@ body {
     font-size: 1.25rem;
 }
 
-.dropdown-menu {
-    background-color: var(gray);
-}
 
 .dropdown-item:active,
 .dropdown-item:focus,
 .dropdown-item:hover {
-    background-color: var(gray);
-}
+     background-color: var(black); 
+} 
 
 .my-container {
     transition: 0.4s;
@@ -54,15 +50,6 @@ body {
 /* for main section */
 .active-cont {
     margin-left: 15.625rem;
-}
-
-#menu-btn {
-    background-color: var(black);
-    color: #fff;
-}
-
-#menu-btn:focus {
-    box-shadow: 0 0 0 0.15625rem #7952b344; 
 }
 
 .topnav-right {
