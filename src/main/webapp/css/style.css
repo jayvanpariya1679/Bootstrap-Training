@@ -5,11 +5,11 @@
 }
 
 :root {
-  --dropdown-gray: #6c757d;
-  --inventory-icon-color: #EC9518;
-  --heart-icon-color: #197154;
-  --download-icon-color: #800000;
-  --message-icon-color: #189AB4;
+  --blue-primary-1: #3B71CA;
+  --warning-1: #EC9518;
+  --success-1: #197154;
+  --danger-1: #800000;
+  --primary-1: #189AB4;
 } 
 
 .avatar {
@@ -113,7 +113,7 @@ body {
     margin-top: -0.5rem;
     position: relative;
     height: 3.313rem;
-    background-color: #3B71CA;
+    background-color: var(--blue-primary-1);
 }
 .online-green{
 	font-size: small;
@@ -135,16 +135,16 @@ body {
 	list-style-type: none;
 }
 .inventory-icon-color{
-    background-color: var(--inventory-icon-color);
+    background-color: var(--warning-1);
 }
 .heart-icon-color{
-	background-color: var(--heart-icon-color);
+	background-color: var(--success-1);
 }
 .download-icon-color{
-	background-color: var(--download-icon-color);
+	background-color: var(--danger-1);
 }
 .message-icon-color{
-	background-color: var(--message-icon-color);
+	background-color: var(--primary-1);
 }
 .heart-svg{
 	width: 3.5rem;
