@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>AdminLTE</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous" />
+        <script src="https://kit.fontawesome.com/ce4cad5060.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link href="CSS/style.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.0.1/dist/chart.umd.min.js"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand d-flex flex-column align-items-start bg-dark" id="sidebar">
+            <h4 class="admin-heading container-fluid font-weight-bold mb-4 text-light justify-content-center">Admin<span class="font-weight-lighter">LTE</span></h4>
+            <div class="container-fluid-md">
+                <img src="images/alexander.svg" alt="Avatar" class="direct-chat-image rounded-circle ml-2" />
+                <div class="dashboard-element container d-inline px-0 position-absolute w-auto h-auto">
+                    <a href="#profile" class="text-decoration-none ml-2 text-white"><span class="font-weight-bold ml-2">Alexander Pierce</span></a><br />
+                    <span class="d-inline-flex align-items-center"> <i class="fa-solid fa-circle fa-2xs text-success ml-3"></i><span class="online-green text-white ml-1">Online</span></span>
+                </div>
+            </div>
+            <ul class="navbar-nav d-flex flex-column mt-2 w-100">
+                <li>
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <a
+                                    href="#"
+                                    type="button"
+                                    class="nav-link text-light pl-4 accordion-button collapsed"
+                                    id="navbarDropdown"
+                                    role="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne"
+                                    aria-expanded="true"
+                                    aria-controls="collapseOne"
+                                >
+                                    <i class="fa fa-dashboard"></i><span class="ml-4">Dashboard</span><i class="fa fa-angle-down pull-right" aria-hidden="true"></i>
+                                </a>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <ul class="dashboard-body mr-1">
+                                        <li>
+                                            <a class="dropdown-item text-white bg-dark" href="#"><i class="fa fa-circle-o"></i><span class="ml-3">Dashboard v1</span></a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item text-white bg-dark" href="#"><i class="fa fa-circle-o"></i><span class="ml-3">Dashboard v2</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item w-100">
+                    <div class="d-flex">
+                        <a href="#" class="nav-link text-light pl-4 mr-4"><i class="fa fa-files-o"></i><span class="ml-4">Layout Options</span></a>
+                        <kbd class="float-right badge bg-primary mt-2 mb-3 ml-1">4</kbd>
+                    </div>
+                </li>
+                <li class="nav-item w-100">
+                    <div class="d-flex">
+                        <a href="#" class="nav-link text-light pl-4"><i class="fa fa-th"></i><span class="ml-4 mr-5">Widget</span></a>
+                        <kbd class="float-right badge bg-success mt-2 mb-3 ml-4">new</kbd>
+                    </div>
+                </li>
+                <li class="nav-item w-100">
+                    <a href="#" class="nav-link text-light pl-4"><i class="fa fa-pie-chart"></i><span class="ml-4">Charts</span><i class="fa fa-angle-left pull-right"></i></a>
+                </li>
+                <li class="nav-item w-100">
+                    <a href="#" class="nav-link text-light pl-4"><i class="fa fa-laptop"></i><span class="ml-4">UI Elements</span><i class="fa fa-angle-left pull-right"></i></a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container-fluid navbar-info bg-primary">
+            <div class="row h-5">
+                <div class="col-1">
+                    <section class="my-container">
+                        <button class="btn my-2 text-white" id="menu-btn" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                    </section>
+                </div>
+                <div class="col-8"></div>
+                <div class="col-3 mt-1 p-2">
+                    <a href="#email" class="mr-2">
+                        <i class="fa-regular fa-envelope text-white">
+                            <sup><kbd class="notification bg-success rounded-pill">4</kbd></sup>
+                        </i>
+                    </a>
+                    <a href="#bell" class="mr-2">
+                        <i class="fa-regular fa-bell text-white">
+                            <sup><kbd class="notification bg-warning rounded-pill">10</kbd></sup>
+                        </i>
+                    </a>
+                    <a href="#flag" class="mr-2">
+                        <i class="fa-regular fa-flag text-white">
+                            <sup><kbd class="notification bg-danger rounded-pill">9</kbd></sup>
+                        </i>
+                    </a>
+                    <img src="images/alexander.svg" alt="Avatar" class="avatar bg-light rounded-circle mr-1" /> <a href="#profile" class="mr-2 text-decoration-none text-white">Alexander Pierce</a>
+                    <a href="#setting" class="mr-2"><i class="fa-solid fa-gear text-white"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-light float-end">
+            <div class="p-2">
+                <span class="dashboard-heading">Dashboard </span><span class="text-black-50 ml-2">Version 2.0</span>
+                <div class="float-right">
+                    <span class="dashboard font-weight-bold"><i class="fa fa-dashboard"></i> Home</span> <span class="dashboard text-black-50">> Dashboard</span>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md mb-3">
+                        <div class="container-fluid-md border bg-white">
+                            <img alt="" src="images/gear.svg" class="w-25 h-25 bg-white" />
+                            <div class="dashboard-element container d-inline px-0 position-absolute w-auto h-auto">
+                                <span class="dashboard-card-above p-2">CPU TRAFFIC</span><br />
+                                <strong class="dashboard-card-below p-2">90%</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md mb-3">
+                        <div class="container-fluid-md border bg-white">
+                            <img alt="" src="images/googleplus.svg" class="w-25 h-25" />
+                            <div class="dashboard-element container d-inline px-0 position-absolute w-auto h-auto">
+                                <span class="dashboard-card-above p-2">LIKES</span><br />
+                                <strong class="dashboard-card-below p-2">41,410</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md mb-3">
+                        <div class="container-fluid-md border bg-white">
+                            <img alt="" src="images/cartnew.svg" class="w-25 h-25" />
+                            <div class="dashboard-element container d-inline px-0 position-absolute w-auto h-auto">
+                                <span class="dashboard-card-above p-2">SALES</span><br />
+                                <strong class="dashboard-card-below p-2">760</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md mb-3">
+                        <div class="container-fluid-md border bg-white">
+                            <img alt="" src="images/people.svg" class="w-25 h-25" />
+                            <div class="dashboard-element container d-inline px-0 position-absolute w-auto h-auto">
+                                <span class="dashboard-card-above p-2">NEW MEMBERS</span><br />
+                                <strong class="dashboard-card-below p-2">2,000</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid bg-light float-end px-4">
+            <div class="row gx-5">
+                <div class="col-lg-4">
+                    <div class="direct-chat border-top border-4 rounded border-warning">
+                        <div class="container-fluid card-header bg-white border d-inline-block">
+                            <span class="card-heading">Direct Chat</span>
+                            <section class="float-right">
+                                <span class="badge bg-warning rounded-pill align-items-center mr-3"><strong>3</strong></span>
+                                <button type="button" class="btn btn-tool p-0 mr-3 text-muted" data-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool p-0 mr-3 text-muted" data-toggle="tooltip" title="Contacts" data-widget="chat-pane-toggle">
+                                    <i class="fas fa-comments"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool p-0 m-0 text-muted" data-widget="remove">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </section>
+                        </div>
+                        <div class="direct-chat-card-body border bg-white">
+                            <div class="direct-chat-messages overflow-auto p-3">
+                                <div class="direct-chat-msg">
+                                    <div class="direct-chat-infos clearfix">
+                                        <span class="direct-chat-name float-left font-weight-bold">Alexander Pierce</span> <span class="direct-chat-timestamp float-right text-black-50">23 Jan 2:00 pm</span>
+                                    </div>
+                                    <div class="container-fluid d-inline-flex p-0 align-items-center">
+                                        <img class="direct-chat-image float-left rounded-circle" src="images/alexander.svg" alt="message user image" />
+                                        <span class="container-fluid align-items-center rounded bg-light d-flex ml-3 p-2 h-25">Is this template really for free? That's unbelievable</span>
+                                    </div>
+                                </div>
+
+                                <div class="direct-chat-msg right">
+                                    <div class="direct-chat-infos clearfix">
+                                        <span class="direct-chat-name float-right font-weight-bold">Sarah Bullock</span> <span class="direct-chat-timestamp float-left text-black-50">23 Jan 2:05 pm</span>
+                                    </div>
+                                    <div class="container-fluid d-inline-flex p-0 align-items-center">
+                                        <span class="container-fluid align-items-center rounded bg-warning text-white d-flex mr-3 p-2 h-25">You better believe it!</span>
+                                        <img class="direct-chat-image float-right rounded-circle" src="images/Nadia.svg" alt="message user image" />
+                                    </div>
+                                </div>
+
+                                <div class="direct-chat-msg mt-2">
+                                    <div class="direct-chat-infos clearfix">
+                                        <span class="direct-chat-name float-left font-weight-bold">Alexander Pierce</span> <span class="direct-chat-timestamp float-right text-black-50">23 Jan 5:37 pm</span>
+                                    </div>
+
+                                    <div class="container-fluid d-inline-flex p-0 align-items-center">
+                                        <img class="direct-chat-image float-left rounded-circle" src="images/alexander.svg" alt="message user image" />
+                                        <span class="container-fluid align-items-center rounded bg-light d-flex ml-3 p-2 h-25">Working with AdminLTE on a great new app! Wanna join?</span>
+                                    </div>
+                                </div>
+
+                                <div class="direct-chat-msg right mt-1">
+                                    <div class="direct-chat-infos clearfix">
+                                        <span class="direct-chat-name float-right font-weight-bold">Sarah Bullock</span> <span class="direct-chat-timestamp float-left text-black-50">23 Jan 6:10 pm</span>
+                                    </div>
+                                    <div class="container-fluid d-inline-flex p-0 align-items-center">
+                                        <span class="container-fluid align-items-center rounded bg-warning text-white d-flex mr-3 p-2 h-25">You better believe it!</span>
+                                        <img class="direct-chat-image float-right rounded-circle" src="images/Nadia.svg" alt="message user image" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="direct-chat-card-body container-fluid card-header d-inline-block bg-white border">
+                            <form action="#" method="post">
+                                <div class="input-group-append d-flex border">
+                                    <input type="text" name="message" placeholder="Type Message ..." class="form-control border-0" />
+                                    <button type="button" class="send-btn btn btn-warning btn-flat">Send</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="latest border-top border-4 rounded border-danger">
+                        <div class="container-fluid card-header bg-white border d-inline-block">
+                            <span class="card-heading">Latest Members</span>
+                            <section class="float-right">
+                                <span class="badge bg-danger p-1 mr-3" data-widget="collapse">8 new Members</span>
+                                <button type="button" class="btn btn-tool p-0 mr-3 text-muted" data-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool p-0 m-0 text-muted" data-widget="remove">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </section>
+                        </div>
+                        <div class="container-fluid d-inline-block bg-white border">
+                            <div class="row mt-1">
+                                <div class="col-3">
+                                    <img class="direct-chat-img rounded-circle img-fluid" src="images/alexander.svg" alt="message user image" />
+                                    <p align="center">
+                                        <span class="font-weight-bold">Alexander...</span><br />
+                                        <span class="latest-member-below text-black-50">Today</span>
+                                    </p>
+                                    <img class="direct-chat-img rounded-circle img-fluid" src="images/Alexander.svg" alt="message user image" />
+                                    <p align="center">
+                                        <span class="font-weight-bold">Alexande</span><br />
+                                        <span class="latest-member-below text-black-50">13 Jan</span>
+                                    </p>
+                                </div>
+                                <div class="col-3">
+                                    <img class="direct-chat-img rounded-circle img-fluid" src="images/Norman.svg" alt="message user image" />
+                                    <p align="center">
+                                        <span class="font-weight-bold">Norman</span><br />
+                                        <span class="latest-member-below text-black-50">Yesterday</span>
+                                    </p>
+                                    <img class="direct-chat-img rounded-circle img-fluid" src="images/Sarah.svg" alt="message user image" />
+                                    <p align="center">
+                                        <span class="font-weight-bold">Sarah</span><br />
+                                        <span class="latest-member-below text-black-50">14 Jan</span>
+                                    </p>
+                                </div>
+                                <div class="col-3">
+                                    <img class="direct-chat-img rounded-circle img-fluid" src="images/Jane.svg" alt="message user image" />
+                                    <p align="center">
+                                        <span class="font-weight-bold">Jane</span><br />
+                                        <span class="latest-member-below text-black-50">12 Jan</span>
+                                    </p>
+                                    <img class="direct-chat-img rounded-circle img-fluid" src="images/Nora.svg" alt="message user image" />
+                                    <p align="center">
+                                        <span class="font-weight-bold">Nora</span><br />
+                                        <span class="latest-member-below text-black-50">15 Jan</span>
+                                    </p>
+                                </div>
+                                <div class="col-3">
+                                    <img class="direct-chat-img rounded-circle img-fluid" src="images/john.svg" alt="message user image" />
+                                    <p align="center">
+                                        <span class="font-weight-bold">Jhon</span><br />
+                                        <span class="latest-member-below text-black-50">12 Jan</span>
+                                    </p>
+                                    <img class="direct-chat-img rounded-circle img-fluid" src="images/Nadia.svg" alt="message user image" />
+                                    <p align="center">
+                                        <span class="font-weight-bold">Nadia</span><br />
+                                        <span class="latest-member-below text-black-50">15 Jan</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2 container fluid border d-inline-block bg-white text-primary text-center">
+                            <a href="#" class="text-decoration-none mt-1 mb-1 text-info">View All Users</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="latest border-top border-4 rounded border-success">
+                        <div class="container-fluid card-header bg-white border d-inline-block">
+                            <span class="card-heading d-flex justify-content-center">Goal Completion</span>
+                        </div>
+                        <div class="border p-3 bg-white">
+                            <div class="mt-4">
+                                <lable class="d-inline-flex text-black font-weight-bold mt-1">Add Products to Cart</lable>
+                                <lable class="text-black float-right mt-1"> <span class="font-weight-bold">160</span>/200</lable>
+                                <div class="pb">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-info" style="width: 70%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <lable class="text-black font-weight-bold">Complete Purchase</lable>
+                                <lable class="text-black float-right"> <span class="font-weight-bold">310</span>/400</lable>
+                                <div class="pb">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-danger" style="width: 70%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <lable class="text-black font-weight-bold">Visit Premium Page</lable>
+                                <lable class="text-black float-right"> <span class="font-weight-bold">480</span>/800</lable>
+                                <div class="pb">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" style="width: 70%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 mb-5">
+                                <lable class="text-black font-weight-bold">Send Inquiries</lable>
+                                <lable class="text-black float-right"> <span class="font-weight-bold">250</span>/500</lable>
+                                <div class="pb">
+                                    <div class="progress">
+                                        <div class="progress-bar bg-warning" style="width: 70%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid p-4 float-end bg-light">
+            <div class="row gx-5">
+                <div class="col-8">
+                    <div class="latest border-top border-4 rounded border-info">
+                        <div class="container-fluid card-header bg-white border d-inline-block">
+                            <span class="card-heading">Latest Orders</span>
+                            <section class="float-right">
+                                <button type="button" class="btn btn-tool p-0 mr-3 text-muted" data-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool p-0 m-0 text-muted" data-widget="remove">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="container bg-white border">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th scope="col">Order ID</th>
+                                    <th scope="col">Item</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Popularity</th>
+                                </tr>
+
+                                <tr>
+                                    <td><a href="#" class="text-decoration-none text-info">OR9842</a></td>
+                                    <td>Call of Duty IV</td>
+                                    <td><span class="badge bg-success" data-widget="collapse">Shipped</span></td>
+                                    <td><i class="fa-solid fa-chart-simple fa-2xl text-success"></i><i class="fa-solid fa-chart-simple fa-2xl text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="text-decoration-none text-info">OR1848</a></td>
+                                    <td>Samsung Smart TV</td>
+                                    <td><span class="badge bg-warning" data-widget="collapse">Pending</span></td>
+                                    <td><i class="fa-solid fa-chart-simple fa-2xl text-warning"></i><i class="fa-solid fa-chart-simple fa-2xl text-warning"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="text-decoration-none text-info">OR7429</a></td>
+                                    <td>iPhone 6 Plus</td>
+                                    <td><span class="badge bg-danger" data-widget="collapse">Delivered</span></td>
+                                    <td><i class="fa-solid fa-chart-simple fa-2xl text-danger"></i><i class="fa-solid fa-chart-simple fa-2xl text-danger"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="text-decoration-none text-info">OR7429</a></td>
+                                    <td>Samsung Smart TV</td>
+                                    <td><span class="badge bg-info" data-widget="collapse">Processing</span></td>
+                                    <td><i class="fa-solid fa-chart-simple fa-2xl text-info"></i><i class="fa-solid fa-chart-simple fa-2xl text-info"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="text-decoration-none text-info">OR1848</a></td>
+                                    <td>Samsung Smart TV</td>
+                                    <td><span class="badge bg-warning" data-widget="collapse">Pending</span></td>
+                                    <td><i class="fa-solid fa-chart-simple fa-2xl text-warning"></i><i class="fa-solid fa-chart-simple fa-2xl text-warning"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="text-decoration-none text-info">OR7429</a></td>
+                                    <td>iPhone 6 Plus</td>
+                                    <td><span class="badge bg-danger" data-widget="collapse">Delivered</span></td>
+                                    <td><i class="fa-solid fa-chart-simple fa-2xl text-danger"></i><i class="fa-solid fa-chart-simple fa-2xl text-danger"></i></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#" class="text-decoration-none text-info">OR9842</a></td>
+                                    <td>Call of Duty IV</td>
+                                    <td><span class="badge bg-success" data-widget="collapse">Shipped</span></td>
+                                    <td><i class="fa-solid fa-chart-simple fa-2xl text-success"></i><i class="fa-solid fa-chart-simple fa-2xl text-success"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn btn-info text-white mb-2 p-1">Place New Order</button>
+                        <button type="button" class="border btn btn-light mb-2 float-right p-1">View All Orders</button>
+                    </div>
+                </div>
+                <div class="cont-font col-md-4 text-white">
+                    <div class="row border bg-warning ml-0 mr-0">
+                        <div class="images inventory-icon-color col-3 d-flex align-items-center justify-content-center">
+                            <svg enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <rect fill="none" height="50" width="50"></rect>
+                                <circle cx="39" cy="11" fill="none" r="3" stroke="#ffffff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"></circle>
+                                <path
+                                    d="M47,5.5  C47,4.119,45.881,3,44.5,3c-0.156,0-14.876,0.002-14.876,0.002c-1.33,0-2.603-0.07-3.341,0.668L3.554,26.398  c-0.739,0.738-0.739,1.936,0,2.674l17.374,17.374c0.738,0.738,1.936,0.738,2.674,0L46.33,23.717c0.738-0.737,0.668-1.98,0.668-3.34  C46.998,20.377,47,5.656,47,5.5z"
+                                    fill="none"
+                                    stroke="#ffffff"
+                                    stroke-linecap="round"
+                                    stroke-miterlimit="10"
+                                    stroke-width="2"
+                                ></path>
+                            </svg>
+                        </div>
+                        <div class="col-9 justify-content-center p-0 mt-1 m-0">
+                            <div class="info-box-content">
+                                <span class="info-box-text ml-2 mt-2">Inventory</span><br />
+                                <span class="info-box-number ml-2 mt-2"><strong>5,200</strong></span>
+                                <div class="progress bg-secondary mt-2 mb-2" style="height: 0.2rem;">
+                                    <div class="progress-bar bg-white" style="width: 50%;"></div>
+                                </div>
+                                <span class="progress-description ml-2 mt-2"> 50% Increase in 30 Days </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row border bg-success mt-3 ml-0 mr-0">
+                        <div class="images heart-icon-color col-3 d-flex align-items-center justify-content-center" style="background-color: #197154;">
+                            <svg class="heart-svg" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+                                <rect fill="none" height="256" width="256"></rect>
+                                <path d="M128,216S28,160,28,92A52,52,0,0,1,128,72h0A52,52,0,0,1,228,92C228,160,128,216,128,216Z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path>
+                            </svg>
+                        </div>
+                        <div class="col-9 justify-content-center p-0 m-0 mt-1">
+                            <div class="info-box-content">
+                                <span class="info-box-text m-2">Mentions</span><br />
+                                <span class="info-box-number m-2"><strong>92,050</strong></span>
+                                <div class="progress bg-secondary mt-2 mb-2" style="height: 0.2rem;">
+                                    <div class="progress-bar bg-white" style="width: 20%;"></div>
+                                </div>
+                                <span class="progress-description m-2"> 20% Increase in 30 Days </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row border bg-danger mt-3 ml-0 mr-0">
+                        <div class="images download-icon-color col-3 d-flex align-items-center justify-content-center">
+                            <svg
+                                height="90px"
+                                width="90px"
+                                version="1.1"
+                                id="Capa_1"
+                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                viewBox="0 0 510.322 510.322"
+                                xml:space="preserve"
+                                fill="#ffffff"
+                                stroke="#ffffff"
+                                class="p-3"
+                            >
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="1.020644"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g>
+                                        <g>
+                                            <path
+                                                style="fill: #ffffff;"
+                                                d="M429.064,159.505c0-0.151,0.086-1.057,0.086-1.057c0-75.282-61.261-136.521-136.543-136.521 c-52.244,0-97.867,30.587-120.753,76.339c-11.67-9.081-25.108-15.682-40.273-15.682c-37.166,0-67.387,30.199-67.387,67.387 c0,0,0.453,3.279,0.798,5.824C27.05,168.716,0,203.423,0,244.516c0,25.389,9.901,49.268,27.848,67.171 c17.968,17.99,41.804,27.869,67.193,27.869h130.244v46.83h-54.66l97.694,102.008l95.602-102.008h-54.66v-46.83H419.25 c50.174,0,91.072-40.855,91.072-90.986C510.3,201.827,474.428,164.639,429.064,159.505z M419.207,312.744H309.26v-55.545h-83.975 v55.545H95.019c-18.184,0-35.333-7.075-48.211-19.996c-12.878-12.878-19.953-30.005-19.953-48.189 c0-32.68,23.21-60.808,55.264-66.956l12.511-2.394l-2.092-14.431l-1.488-10.785c0-22.347,18.184-40.51,40.531-40.51 c13.266,0,25.691,6.514,33.305,17.408l15.229,21.873l8.52-25.303c15.013-44.652,56.796-74.656,103.906-74.656 c60.506,0,109.709,49.203,109.709,109.644l-1.337,25.712l15.121,0.302l3.149-0.086c35.419,0,64.216,28.797,64.216,64.216 C483.401,283.969,454.604,312.744,419.207,312.744z"
+                                            ></path>
+                                        </g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                        <g></g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="col-9 justify-content-center p-0 m-0 mt-1">
+                            <div class="info-box-content">
+                                <span class="info-box-text m-2">Downlaods</span><br />
+                                <span class="info-box-number m-2"><strong>114,381</strong></span>
+                                <div class="progress bg-secondary mt-2 mb-2" style="height: 0.2rem;">
+                                    <div class="progress-bar bg-white" style="width: 70%;"></div>
+                                </div>
+                                <span class="progress-description m-2"> 70% Increase in 30 Days </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row border bg-info mt-3 ml-0 mr-0">
+                        <div class="images message-icon-color col-3 d-flex align-items-center justify-content-center">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff" class="p-3">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M4.99951 16.55V19.9C4.99922 20.3102 5.11905 20.7114 5.34418 21.0542C5.56931 21.397 5.88994 21.6665 6.26642 21.8292C6.6429 21.9919 7.05875 22.0408 7.46271 21.9698C7.86666 21.8989 8.24103 21.7113 8.53955 21.4301L11.1495 18.9701H12.0195C17.5395 18.9701 22.0195 15.1701 22.0195 10.4701C22.0195 5.77009 17.5395 1.97009 12.0195 1.97009C6.49953 1.97009 2.01953 5.78009 2.01953 10.4701C2.042 11.6389 2.32261 12.7882 2.84125 13.8358C3.35989 14.8835 4.10373 15.8035 5.01953 16.53L4.99951 16.55Z"
+                                        stroke="#ffffff"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    ></path>
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="col-9 justify-content-center p-0 m-0 mt-1">
+                            <div class="info-box-content">
+                                <span class="info-box-text m-2">Direct Messages</span><br />
+                                <span class="info-box-number m-2"><strong>163,921</strong></span>
+                                <div class="progress bg-secondary mt-2 mb-2" style="height: 0.2rem;">
+                                    <div class="progress-bar bg-white" style="width: 40%;"></div>
+                                </div>
+                                <span class="progress-description m-2"> 40% Increase in 30 Days </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid bg-light">
+            <div class="row">
+                <div class="col-8"></div>
+                <div class="col-4">
+                    <div class="container-fluid">
+                        <div class="container-fluid border card-header d-inline-block bg-white">
+                            <span class="card-heading">Browser usage</span>
+                            <button type="button" class="btn btn-tool float-right p-0 m-0 text-muted" data-widget="remove">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            <button type="button" class="btn btn-tool float-right p-0 mr-4 text-muted" data-widget="collapse">
+                                <i class="fas fa-minus"></i>
+                            </button>
+                        </div>
+                        <div class="bg-white border">
+                            <canvas id="chartjs-doughnut"></canvas>
+                        </div>
+                        <div class="container-fluid card-header d-inline-block bg-white border">
+                            United States of America<span class="float-right text-danger"><i class="fa fa-angle-down"></i> 12%</span>
+                        </div>
+                        <div class="container-fluid card-header d-inline-block bg-white border">
+                            India<span class="float-right text-success"><i class="fa fa-angle-up"></i> 4%</span>
+                        </div>
+                        <div class="container-fluid card-header d-inline-block bg-white border">
+                            China<span class="float-right text-warning"> <i class="fa fa-angle-left"></i> 0% </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid bg-light">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <div class="border-top border-4 rounded border-primary bg-white mt-4 ml-3 mr-3">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td colspan="2">
+                                        <span class="card-heading">Recently Added Products</span>
+                                        <button type="button" class="btn btn-box-tool float-right m-0 p-0 text-muted" data-widget="remove">
+                                            <i class="fa-solid fa-times fa-sm"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-box-tool float-right p-0 mr-4 text-muted" data-widget="collapse">
+                                            <i class="fa-solid fa-minus fa-sm"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" width="20%"><img src="images/50.png" class="img-fluid recently-added-image position-relative" /></td>
+
+                                    <td width="80%">
+                                        <div class="d-inline">
+                                            <span class="text-info"><small>Samsung TV</small></span> <span class="float-right badge bg-warning"> $1800 </span>
+                                        </div>
+                                        <div class="row">
+                                            <small><span class="text-black-50 truncate-text position-absolute text-truncate">Samsung 32"1080p 60hz LED Smart HDTV.</span></small>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center"><img src="images/50.png" class="img-fluid recently-added-image position-relative" /></td>
+
+                                    <td>
+                                        <div class="d-inline">
+                                            <span class="text-info"><small>Bicycle</small></span> <span class="badge bg-info float-lg-right">$700</span>
+                                        </div>
+                                        <div class="row">
+                                            <span class="text-black-50"><small class="truncate-text position-absolute text-truncate">26"Mongoose Dolomite Men's 7-speed,Navy Blue color.</small></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center"><img src="images/50.png" class="img-fluid recently-added-image position-relative" /></td>
+
+                                    <td>
+                                        <div class="d-inline">
+                                            <span class="text-info"><small>Xbox One</small></span> <span class="badge bg-danger float-lg-right" data-widget="collapse">$350</span>
+                                        </div>
+                                        <div class="row">
+                                            <span class="text-black-50"><small class="truncate-text position-absolute text-truncate">Xbox Console Bundle with Halo Master Chief Collection.</small></span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center"><img src="images/50.png" class="img-fluid recently-added-image position-relative" /></td>
+
+                                    <td>
+                                        <div class="d-inline">
+                                            <span class="text-info"><small>PlayStation 4</small></span> <span class="badge bg-success float-right" data-widget="collapse">$399</span>
+                                        </div>
+                                        <div class="row">
+                                            <span class="text-black-50"><small class="truncate-text position-absolute text-truncate">PlayStation 4 500GB Console(PS4)</small></span>
+                                        </div>
+                                    </td>
+                                    <td align="right"></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">
+                                        <a href="#" class="text-decoration-none text-info"><small>View All Products</small></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            new Chart(document.getElementById("chartjs-doughnut"), {
+                type: "doughnut",
+                data: {
+                    labels: ["Chrome", "IE", "Firefox", "Safari", "Opera", "Navigator"],
+                    datasets: [
+                        {
+                            backgroundColor: ["red", "green", "orange", "skyblue", "blue", "lightgray"],
+                            data: [35, 15, 10, 20, 12, 3],
+                        },
+                    ],
+                },
+                options: {
+                    title: {
+                        display: false,
+                        text: "Chart JS Doughnut.",
+                    },
+                    cutout: "60%", // the portion of the doughnut that is the cutout in the middle
+                    radius: 100,
+                },
+            });
+        </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script>
+            var menuBtn = document.querySelector("#menu-btn");
+            var sideBar = document.querySelector("#sidebar");
+            var container = document.querySelector(".my-container");
+            menuBtn.addEventListener("click", () => {
+                sideBar.classList.toggle("active-nav");
+                container.classList.toggle("active-cont");
+            });
+
+            document.addEventListener("click", (event) => {
+                if (!sideBar.contains(event.target) && !menuBtn.contains(event.target)) {
+                    sideBar.classList.remove("active-nav");
+                    container.classList.remove("active-cont");
+                }
+            });
+        </script>
+    </body>
+</html>

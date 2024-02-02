@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --blue-primary-1: #3B71CA;
+  --warning-1: #EC9518;
+  --success-1: #197154;
+  --danger-1: #800000;
+  --primary-1: #189AB4;
+} 
+
+.avatar {
+    vertical-align: middle;
+    width: 1.875rem; 
+    height: 1.875rem; 
+    border-radius: 50%;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.navbar {
+	z-index: 1;
+    width: 15.625rem; 
+    height: 100rem;
+    position: fixed;
+    margin-left: -18.75rem;
+    transition: 0.4s;
+}
+
+
+.nav-link{
+    font-size: medium;
+}
+
+.dropdown-item{
+	font-weight: 300;
+}
+
+.dropdown-item:active,
+.dropdown-item:focus,
+.dropdown-item:hover{
+     font-weight: bold;
+     
+} 
+.nav-link{
+	font-weight: 300;
+}
+.nav-link:active,
+.nav-link:focus,
+.nav-link:hover{
+	font-weight: bold;
+	
+}
+.my-container {
+    transition: 0.4s;
+}
+
+/* for navbar */
+.active-nav {
+    margin-left: 0;
+}
+
+/* for main section */
+.active-cont {
+    margin-left: 15.625rem;
+}
+
+.topnav-right {
+    margin-right: 0.625rem; 
+}
+
+.direct-chat-image{
+	width: 3rem;
+}
+.card-heading{
+	font-size: large;
+}
+.dashboard-card-above{
+	font-size:small;
+}
+.dashboard{
+	font-size: small;	
+}
+.dashboard-heading{
+	font-size:larger;	
+}
+.latest-member-below{
+	font-size: small;
+}
+.images{
+	width: 6.75rem;
+	height: 6.75rem;
+}
+.cont-font{
+	font-size:medium;
+}
+.dashboard-element{
+	z-index: 0;
+}
+.direct-chat-card-body{
+	font-size: smaller;
+	
+}
+.direct-chat-messages{
+	max-height: 18.125rem;
+}
+.admin-heading{
+    margin-top: -0.5rem;
+    position: relative;
+    height: 3.313rem;
+    background-color: var(--blue-primary-1);
+}
+.online-green{
+	font-size: small;
+}
+
+.recently-added-image{
+	max-width: 70%;
+}
+.notification{
+	font-size: xx-small;
+}
+.send-btn{
+	border-radius: 0;
+}
+.truncate-text{
+	width: 20rem;
+}
+.dashboard-body{
+	list-style-type: none;
+}
+.inventory-icon-color{
+    background-color: var(--warning-1);
+}
+.heart-icon-color{
+	background-color: var(--success-1);
+}
+.download-icon-color{
+	background-color: var(--danger-1);
+}
+.message-icon-color{
+	background-color: var(--primary-1);
+}
+.heart-svg{
+	width: 3.5rem;
+}
